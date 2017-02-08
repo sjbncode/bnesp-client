@@ -1,0 +1,15 @@
+.slide-left-enter-active {
+  transition: all .3s ease;
+}
+.slide-left-enter, .slide-left-leave-active {
+  transform: translateX(500px);
+  opacity: 0;
+}
+
+.slide-right-enter-active {
+  transition: all .3s ease;
+}
+.slide-right-enter, .slide-right-leave-active {
+  transform: translateX(-500px);
+  opacity: 0;
+}
