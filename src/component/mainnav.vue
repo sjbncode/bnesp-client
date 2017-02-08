@@ -1,5 +1,5 @@
 <template>
-  <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :router=true>
+  <el-menu default-active="2" class="el-menu-vertical" @open="handleOpen" @close="handleClose" :router=true :unique-opened=true>
     <el-submenu index="1">
       <template slot="title"> <i class="el-icon-message"></i>
         导航一
@@ -25,6 +25,11 @@
         <el-menu-item index="/t/form">From1</el-menu-item>
         <el-menu-item index="/t/form2">From2</el-menu-item>
         <el-menu-item index="/t/form3">From3</el-menu-item>
+        <el-menu-item index="/t/table1">Table1</el-menu-item>
+        <el-menu-item index="/t/table2">Table2</el-menu-item>
+        <el-menu-item index="/t/table3">Table3</el-menu-item>
+        <el-menu-item index="/t/dialog">Dialog</el-menu-item>
+        <el-menu-item index="/t/tab1">Tab1</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
     <el-menu-item index="2"> <i class="el-icon-menu"></i>
