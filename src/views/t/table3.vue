@@ -1,6 +1,7 @@
 <template>
+<div>
   <el-table
-    :data="tableData3"
+    :data="tableInGrid"
     border
     style="width: 100%">
     <el-table-column type="expand">
@@ -44,12 +45,24 @@
       </template>
     </el-table-column>
   </el-table>
+  <el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage"
+      :page-sizes="[2,100, 200, 300, 400]"
+      :page-size="pagesize"
+      layout="total, sizes,->, prev, pager, next, jumper"
+      :total="tableData3.length">
+    </el-pagination>
+    </div>
 </template>
 
 <script>
   export default {
     data() {
       return {
+        pagesize:2,
+        currentPage:1,
          tableData3: [{
           date: '2016-05-03',
           name: '王小虎',
@@ -115,6 +128,25 @@
       },
       handleDelete(index, row) {
         console.log(index, row);
+      },
+      handleSizeChange(val) {
+        this.pagesize=val;
+        console.log(`每页 ${val} 条`);
+      },
+      handleCurrentChange(val) {
+        this.currentPage = val;
+        console.log(`当前页: ${val}`);
+      }
+    },
+    computed: {
+      tableInGrid:function(){
+        var total=this.tableData3.length;
+        var skip=this.pagesize*(this.currentPage-1)||0;
+        var end=skip+this.pagesize;
+        console.log("1:"+total);
+        console.log("2:"+skip);
+        console.log("3:"+end);
+        return this.tableData3.slice(skip,end);
       }
     }
   }
