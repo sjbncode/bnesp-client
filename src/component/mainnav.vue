@@ -1,5 +1,5 @@
 <template>
-  <el-menu default-active="2" class="el-menu-vertical" @open="handleOpen" @close="handleClose" :router=true :unique-opened=true>
+  <el-menu default-active="2" class="el-menu-vertical" @open="handleOpen" @close="handleClose" :router=true :unique-opened=false>
       <template v-for="(m,i) in menu">
         <template v-if="m.items">
           <el-submenu :index="i">
