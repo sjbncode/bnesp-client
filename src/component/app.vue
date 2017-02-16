@@ -24,7 +24,7 @@
     <div class="wrapper">
         <div class="wrapper-header"></div>
         <div class="wrapper-navigate">
-            <mainnav></mainnav>
+            <mainnav :menu="menu"></mainnav>
         </div>
         <div class="wrapper-container">
             <transition :name="transitionName">
@@ -39,7 +39,21 @@
     export default {
         data () {
             return {
-                transitionName:'slide-right'
+                transitionName:'slide-right',
+                menu:[{title:'Demo',icon:'el-icon-message'
+                    ,items:[{title:'form1',url:'/t/form'},
+                        {title:'form2',url:'/t/form2'},
+                        {title:'form3',url:'/t/form3'},
+                        {title:'table1',url:'/t/Table1'},
+                        {title:'table2',url:'/t/Table2'},
+                        {title:'table3',url:'/t/Table3'},
+                        {title:'Tab1',url:'/t/tab1'}]}
+                ,{title:'Home',icon:'el-icon-menu',url:'/index'}
+                ,{title:'Nav3',icon:'el-icon-setting',items:[{title:'1',url:'/index'},
+                        {title:'2',url:'/t/form'},
+                        {title:'3',url:'/t/form'},
+                        {title:'4',url:'/t/form'},
+                ]},]
           }
         },
         ready () {
