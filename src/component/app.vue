@@ -36,10 +36,11 @@
                         {title:'Dialog',url:'/t/dialog'},
                         {title:'Tab1',url:'/t/tab1'}]}
                 ,{title:'Home',icon:'el-icon-menu',url:'/index'}
-                ,{title:'Nav3',icon:'el-icon-setting',items:[{title:'1',url:'/index'},
-                        {title:'2',url:'/t/form'},
-                        {title:'3',url:'/t/form'},
-                        {title:'4',url:'/t/form'},
+                ,{title:'Dashboard Demo',icon:'el-icon-setting'
+                    ,items:[{title:'Dashboard1',url:'/t/dashboard1'},
+                    {title:'Dashboard2',url:'/t/dashboard1'},
+                    {title:'Dashboard3',url:'/t/dashboard1'},
+                    {title:'Dashboard4',url:'/t/dashboard1'},
                 ]},]
           }
         },
