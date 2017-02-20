@@ -1,51 +1,43 @@
 <template>
 <div class="dashboard">	
 	<el-row type="flex" class="row-bg" justify="space-around">
-		<el-col :span="6">
-			<el-card class="box-card">
-				<div slot="header" class="clearfix">
-					<span style="line-height: 36px;">Card name</span>
-					<el-button style="float: right;" type="primary">Operation button</el-button>
-				</div>
-				<div v-for="o in 4" class="text item">
-					{{'List item ' + o }}
-				</div>
-			</el-card>
+		<el-col :span="3">
+			<el-card class="box-card" :body-style="{ padding: '0px' }">
+				<div class="status">New</div>
+				<div class="status-count">{{StatusCount.New}}</div>
+			</el-card>	
 		</el-col>
-		<el-col :span="6">
-			<el-card class="box-card">
-				<div slot="header" class="clearfix">
-					<span style="line-height: 36px;">Card name</span>
-					<el-button style="float: right;" type="primary">Operation button</el-button>
-				</div>
-				<div v-for="o in 4" class="text item">
-					{{'List item ' + o }}
-				</div>
-			</el-card>
+		<el-col :span="3">
+			<el-card class="box-card" :body-style="{ padding: '0px' }">
+				<div class="status">Inqueue</div>
+				<div class="status-count">{{StatusCount.Inqueue}}</div>
+			</el-card>	
 		</el-col>
-		<el-col :span="6">
-			<el-card class="box-card">
-				<div slot="header" class="clearfix">
-					<span style="line-height: 36px;">Card name</span>
-					<el-button style="float: right;" type="primary">Operation button</el-button>
-				</div>
-				<div v-for="o in 4" class="text item">
-					{{'List item ' + o }}
-				</div>
-			</el-card>
+		<el-col :span="3">
+			<el-card class="box-card" :body-style="{ padding: '0px' }">
+				<div class="status">Processing</div>
+				<div class="status-count">{{StatusCount.Processing}}</div>
+			</el-card>	
 		</el-col>
-		<el-col :span="2" v-for="(o, index) in 2" >
-		    <el-card :body-style="{ padding: '0px' }">
-		      <!-- <img src="~examples/assets/images/hamburger.png" class="image"> -->
-		      <div style="padding: 14px;">
-		        <span>Yummy hamburger</span>
-		        <div class="bottom clearfix">
-		          <time class="time">{{ currentDate }}</time>
-		          <el-button type="text" class="button">Operating button</el-button>
-		        </div>
-		      </div>
-		    </el-card>
-  		</el-col>
+		<el-col :span="3">
+			<el-card class="box-card" :body-style="{ padding: '0px' }">
+				<div class="status">Exception</div>
+				<div class="status-count">{{StatusCount.Exception}}</div>
+			</el-card>	
+		</el-col>
+		<el-col :span="3">
+			<el-card class="box-card" :body-style="{ padding: '0px' }">
+				<div class="status">Success</div>
+				<div class="status-count">{{StatusCount.UpdateSuccess}}</div>
+			</el-card>	
+		</el-col>
+		<el-col :span="3">
+			<el-card class="box-card" :body-style="{ padding: '0px' }">
+				<div class="status">Ignore</div>
+				<div class="status-count">{{StatusCount.NoNeedUpload}}</div>
+			</el-card>	
+		</el-col>
+		
 	</el-row>
 </div>
 </template>
@@ -53,7 +45,7 @@
 	export default{
 		data(){
 			return {
-
+				StatusCount:{New:0,Inqueue:0,Processing:0,Exception:0,UpdateSuccess:11221111,NoNeedUpload:10000}
 			}
 		},
 		props:['message'],
@@ -63,5 +55,18 @@
 <style type="text/css" scoped>
 	.dashboard{
 		background-color: #fff;
+	}
+	.status{
+		float: left;
+		/*width: 70px;*/
+		background-color: red;
+		text-align: center;
+		padding: 10px;
+	}
+	.status-count{
+		padding: 10px;
+		text-align: center;
+		width: 100%;
+		white-space: nowrap;
 	}
 </style>
