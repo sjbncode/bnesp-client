@@ -1,3 +1,9 @@
 FROM node:7.6
+RUN mkdir -p /home/Service 
+WORKDIR /home/Service
+Copy . /home/Service
+RUN npm install
 # replace this with your application's default port
-EXPOSE 8020
+EXPOSE 8010
+
+CMD ["npm","run","dev"]
