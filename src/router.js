@@ -11,6 +11,7 @@ const routers=[
 {path:'/t/dialog',component:(resolve)=>{require(['./views/t/dialog.vue'], resolve);}},
 {path:'/t/tab1',component:(resolve)=>{require(['./views/t/tab1.vue'], resolve);}},
 {path:'/t/dashboard1',component:(resolve)=>{require(['./views/t/dashboard1.vue'], resolve);}},
+{path:'/t/dashboard2',component:(resolve)=>{require(['./views/t/dashboard2.vue'], resolve);}},
 {path:'*',redirect:'/index'},
 ]
 export default routers;
