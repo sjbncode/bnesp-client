@@ -24,20 +24,7 @@
 				<div class="status">Exception</div>
 				<div class="status-count">{{StatusCount.Exception}}</div>
 			</el-card>	
-		</el-col>
-		<el-col :span="3">
-			<el-card class="box-card" :body-style="{ padding: '0px' }">
-				<div class="status">Success</div>
-				<div class="status-count">{{StatusCount.UpdateSuccess}}</div>
-			</el-card>	
-		</el-col>
-		<el-col :span="3">
-			<el-card class="box-card" :body-style="{ padding: '0px' }">
-				<div class="status">Ignore</div>
-				<div class="status-count">{{StatusCount.NoNeedUpload}}</div>
-			</el-card>	
-		</el-col>
-		
+		</el-col>				
 	</el-row>
 </div>
 </template>
