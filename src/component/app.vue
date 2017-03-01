@@ -4,7 +4,7 @@
 <template>
     <div class="wrapper">
         <div class="wrapper-header">
-            <a href="/" ><img class="logo"  src="..\img\logo.png"/><span>Vue2, Element UI</span></a>
+            <a href="/" ><img class="logo"  src="../img/logo.png"/><span>Vue2, Element UI</span></a>
         </div>
         <div class="wrapper-main">
             <div class="wrapper-navigate">
@@ -38,7 +38,7 @@
                 ,{title:'Home',icon:'el-icon-menu',url:'/index'}
                 ,{title:'Dashboard Demo',icon:'el-icon-setting'
                     ,items:[{title:'Dashboard1',url:'/t/dashboard1'},
-                    {title:'Dashboard2',url:'/t/dashboard1'},
+                    {title:'Dashboard2',url:'/t/dashboard2'},
                     {title:'Dashboard3',url:'/t/dashboard1'},
                     {title:'Dashboard4',url:'/t/dashboard1'},
                 ]},]
