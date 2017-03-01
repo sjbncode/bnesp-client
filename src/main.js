@@ -7,7 +7,8 @@ import VueRouter from 'vue-router';
 
 
 Vue.use(VueRouter);
-Vue.use(ElementUI)
+Vue.use(ElementUI);
+Vue.use(require('vue-resource'));
 
 // 开启debug模式
 Vue.config.debug = true;
