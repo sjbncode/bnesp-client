@@ -37,7 +37,7 @@
                         {title:'Tab1',url:'/t/tab1'}]}
                 ,{title:'Home',icon:'el-icon-menu',url:'/index'}
                 ,{title:'Dashboards',icon:'el-icon-setting'
-                    ,items:[{title:'Sync Dashboard',url:'/t/sync_dashboard'},
+                    ,items:[{title:'Sync Dashboard',url:'/sync/sync_dashboard'},
                     {title:'Dashboard2',url:'/t/dashboard2'},
                     {title:'Dashboard3',url:'/t/dashboard2'},
                     {title:'Dashboard4',url:'/t/dashboard2'},

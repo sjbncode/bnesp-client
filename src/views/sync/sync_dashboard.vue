@@ -89,7 +89,6 @@
 			return {
 				StatusCount:{New:0,Inqueue:0,Processing:0,Exception:0,UpdateSuccess:11221111,NoNeedUpload:10000}
 				,fetchLogSummaryUrl:'http://localhost:3009/api/synclog'
-				,fetchExceptionLogUrl:'http://localhost:3009/api/syncexceptionlog'
 				,refreshData:undefined
 				,pagesize:100
 				,currentPage:1
@@ -118,18 +117,6 @@
 							this.StatusCount.Processing=_.reduce(_.pluck(this.tableData,'Processing'),function(m,n){return m+n},0);
 							this.StatusCount.Exception=_.reduce(_.pluck(this.tableData,'Exception'),function(m,n){return m+n},0);
 					});
-			},
-			fetchExceptionLog:function(row,expanded){
-				if(expanded){
-					alert('xx');
-				}
-				// this.$http.get(this.fetchExceptionLogUrl).then(res=>{
-				// 			this.tableData=res.data.data
-				// 			this.StatusCount.New=_.reduce(_.pluck(this.tableData,'New'),function(m,n){return m+n},0);
-				// 			this.StatusCount.Inqueue=_.reduce(_.pluck(this.tableData,'Inqueue'),function(m,n){return m+n},0);
-				// 			this.StatusCount.Processing=_.reduce(_.pluck(this.tableData,'Processing'),function(m,n){return m+n},0);
-				// 			this.StatusCount.Exception=_.reduce(_.pluck(this.tableData,'Exception'),function(m,n){return m+n},0);
-				// 	});
 			},
 			handleSizeChange(val) {
 		        this.pagesize=val;
