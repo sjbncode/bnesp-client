@@ -36,11 +36,11 @@
                         {title:'Dialog',url:'/t/dialog'},
                         {title:'Tab1',url:'/t/tab1'}]}
                 ,{title:'Home',icon:'el-icon-menu',url:'/index'}
-                ,{title:'Dashboard Demo',icon:'el-icon-setting'
-                    ,items:[{title:'Dashboard1',url:'/t/dashboard1'},
+                ,{title:'Dashboards',icon:'el-icon-setting'
+                    ,items:[{title:'Sync Dashboard',url:'/t/sync_dashboard'},
                     {title:'Dashboard2',url:'/t/dashboard2'},
-                    {title:'Dashboard3',url:'/t/dashboard1'},
-                    {title:'Dashboard4',url:'/t/dashboard1'},
+                    {title:'Dashboard3',url:'/t/dashboard2'},
+                    {title:'Dashboard4',url:'/t/dashboard2'},
                 ]},]
           }
         },

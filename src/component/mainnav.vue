@@ -8,7 +8,7 @@
               {{m.title}}
             </template>
             <template v-for="s in m.items">
-              <el-menu-item :index="s.url">sub {{s.title}}</el-menu-item>
+              <el-menu-item :index="s.url">{{s.title}}</el-menu-item>
             </template>            
           </el-submenu>
         </template>
