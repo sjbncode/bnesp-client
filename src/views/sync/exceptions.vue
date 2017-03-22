@@ -1,57 +1,39 @@
 <template>
-<div class="dashboard">
-<el-button v-on:click="goBack">Go back</el-button>
-<span>{{$route.params.dataName}}</span>
-<br/><br/>
-	<el-table
-	:data="tableInGrid"	
-	v-loading="loading"
-	element-loading-text="加载中"
-	border
-	style="width: 100%"
-	v-on:expand="fetchExceptionDetail">
-	 <el-table-column type="expand">
-      <template scope="props" >
-        <p>Key1: {{ props.row.Key1 }}</p>
-        <p>key2: {{ props.row.key2 }}</p>
-        <p>EntityXml: {{ props.row.EntityXml }}</p>
-        <p>PostEntityXml: {{ props.row.PostEntityXml }}</p>
-        <p>Sync Times: {{ props.row.SyncTimes }}</p>
-        <p>CreatedBy: {{ props.row.CreatedBy }}</p>
-        <p>CreatedDttm: {{ props.row.CreatedDttm }}</p>
-        <p>UpdatedDttm: {{ props.row.UpdatedDttm }}</p>
-      </template>
-    </el-table-column>
-
-	<el-table-column
-	label="Key1"
-	width="300">
-	<template scope="scope">
-	<span style="margin-left: 10px">{{ scope.row.Key1 }}</span>
-	</template>
-	</el-table-column>
-	
-	<el-table-column 
-      sortable prop="Result"
-	label="Result">
-	<template scope="scope">
-	{{ scope.row.Result }}
-	</template>
-	</el-table-column>
-	
-	</el-table>
-	<el-pagination
-	@size-change="handleSizeChange"
-	@current-change="handleCurrentChange"
-	:current-page="currentPage"
-	:page-sizes="[10,50,100]"
-	:page-size="pagesize"
-	layout="total, sizes,->, prev, pager, next, jumper"
-	:total="tableData.length">
-	</el-pagination>
-	</el-row>
-</div>
+    <div class="dashboard">
+        <el-button v-on:click="goBack">Go back</el-button>
+        <span>{{$route.params.dataName}}</span>
+        <br/>
+        <br/>
+        <el-table :data="tableInGrid" v-loading="loading" element-loading-text="加载中" border style="width: 100%" v-on:expand="fetchExceptionDetail">
+            <el-table-column type="expand">
+                <template scope="props">
+                    <p>Key1: {{ props.row.Key1 }}</p>
+                    <p>key2: {{ props.row.key2 }}</p>
+                    <p>EntityXml: {{ props.row.EntityXml }}</p>
+                    <p>PostEntityXml: {{ props.row.PostEntityXml }}</p>
+                    <p>Sync Times: {{ props.row.SyncTimes }}</p>
+                    <p>CreatedBy: {{ props.row.CreatedBy }}</p>
+                    <p>CreatedDttm: {{ props.row.CreatedDttm }}</p>
+                    <p>UpdatedDttm: {{ props.row.UpdatedDttm }}</p>
+                </template>
+            </el-table-column>
+            <el-table-column label="Key1" width="300">
+                <template scope="scope">
+                    <span style="margin-left: 10px">{{ scope.row.Key1 }}</span>
+                </template>
+            </el-table-column>
+            <el-table-column sortable prop="Result" label="Result">
+                <template scope="scope">
+                    {{ scope.row.Result }}
+                </template>
+            </el-table-column>
+        </el-table>
+        <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage" :page-sizes="[10,50,100]" :page-size="pagesize" layout="total, sizes,->, prev, pager, next, jumper" :total="tableData.length">
+        </el-pagination>
+        </el-row>
+    </div>
 </template>
+
 <script type="text/javascript">
 	import _ from 'underscore';
 	export default{
