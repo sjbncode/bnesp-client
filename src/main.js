@@ -4,11 +4,12 @@ import 'element-ui/lib/theme-default/index.css'
 import App from './component/app.vue'
 import routes from './router';
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 
 
 Vue.use(VueRouter);
 Vue.use(ElementUI);
-Vue.use(require('vue-resource'));
+Vue.use(VueResource);
 
 // 开启debug模式
 Vue.config.debug = true;
