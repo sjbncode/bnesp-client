@@ -3,12 +3,15 @@
 </style>
 <template>
     <div class="wrapper">
+        <!-- <div id="init" v-if='!initDone' class="full-screen">{{initMessage}}</div> -->
+           
         <div class="wrapper-header">
-            <a href="/" ><img class="logo"  src="../img/logo.png"/><span>Vue2, Element UI</span></a>
+            <!-- <a href="/" style="float: left"><img class="logo"  src="../img/logo.png"/><span>Vue2, Element UI</span></a> -->
+            <mainnav :menu="menu"></mainnav>
         </div>
         <div class="wrapper-main">
             <div class="wrapper-navigate">
-                <mainnav :menu="menu"></mainnav>
+                <!-- <mainnav :menu="menu"></mainnav> -->
                 <div></div>
             </div>
             <div class="wrapper-container">
@@ -25,6 +28,8 @@
     export default {
         data () {
             return {
+                initDone:false,
+                initMessage:'starting',
                 transitionName:'slide-right',
                 menu:[{title:'Demo',icon:'el-icon-message'
                     ,items:[{title:'form1',url:'/t/form'},
@@ -47,6 +52,14 @@
         ready () {
 
         },
+        created(){
+
+            setTimeout(()=>{this.initMessage="1"},1000);
+            setTimeout(()=>{this.initMessage="2"},2000);
+            setTimeout(()=>{this.initMessage="3"},3000);
+            setTimeout(()=>{this.initMessage="4"},4000);
+            setTimeout(()=>{this.initDone=true},2000);
+        },
         beforeDestroy () {
 
         },
@@ -62,3 +75,19 @@
         components:{mainnav}
     }
 </script>
+<style>
+    .full-screen{
+           /*width:100%;
+    height:100%;*/
+    background-color:#fff;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    z-index:2;
+    opacity:1;
+    text-align: center;
+    padding-top: 500px;
+    }
+</style>

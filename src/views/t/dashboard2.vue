@@ -53,7 +53,7 @@
 	export default{
 		data(){
 			return {
-
+				currentDate:''
 			}
 		},
 		props:['message'],

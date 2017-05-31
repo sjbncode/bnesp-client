@@ -1,5 +1,7 @@
 <template>
-  <el-menu default-active="2" class="el-menu-vertical" @open="handleOpen" @close="handleClose" :router=true :unique-opened=false>
+  <el-menu default-active="2"  mode="horizontal" @open="handleOpen" @close="handleClose" :router=true :unique-opened=false>
+      <a href="/"  style=" float: left;text-decoration: none;padding-left: 20px;padding-right: 20px"><img class="logo"  src="../img/logo.png"/><span>Vue2, Element UI</span></a>
+      
       <template v-for="(m,i) in menu">
         <template v-if="m.items">
           <el-submenu :index="i">

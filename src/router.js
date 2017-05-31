@@ -13,6 +13,7 @@ const routers=[
 {path:'/sync/sync_dashboard',name:'sync_dashboard',component:(resolve)=>{require(['./views/sync/sync_dashboard.vue'], resolve);}},
 {path:'/t/dashboard2',component:(resolve)=>{require(['./views/t/dashboard2.vue'], resolve);}},
 {path:'/sync/exceptions/:dataName',name:'sync_exceptions',component:(resolve)=>{require(['./views/sync/exceptions.vue'], resolve);}},
+{path:'/product/:category',name:'products',component:(resolve)=>{require(['./views/product/list.vue'], resolve);}},
 {path:'*',redirect:'/index'},
 ]
 export default routers;

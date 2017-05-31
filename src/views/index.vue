@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../img/logo.png">
+    <img src="../img/logo.png" >
     <h1>{{ msg }}</h1>
     <el-button @click.native="startHacking">Let's do it</el-button>
 
